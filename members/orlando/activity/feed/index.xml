@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>coorreia.github.io/orlando | COORREIA.GITHUB.IO/ORLANDO | Activity</title>
+	<link>/orlando/members/orlando/activity/</link>
+	<atom:link href="/orlando/members/orlando/activity/feed/" rel="self" type="application/rss+xml" />
+	<description>Activity feed for COORREIA.GITHUB.IO/ORLANDO.</description>
+	<lastBuildDate>Sun, 05 Sep 2021 13:02:36 +0000</lastBuildDate>
+	<generator>https://buddypress.org/?v=9.1.1</generator>
+	<language>en-US</language>
+	<ttl>30</ttl>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>2</sy:updateFrequency>
+	
+						<item>
+				<guid isPermaLink="false">80485901b2a33826803d7c44788fb4b0</guid>
+				<title>COORREIA.GITHUB.IO/ORLANDO wrote a new post, É fácil construir um máquina de tijolo ecológico</title>
+				<link>/orlando/?p=2043</link>
+				<pubDate>Fri, 03 Sep 2021 14:00:19 +0000</pubDate>
+
+									<content:encoded><![CDATA[<p><iframe loading="lazy" title="É fácil construir um máquina de tijolo ecológico" width="720" height="405" src="https://www.youtube.com/embed/6J7F95R1kNg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content:encoded>
+				
+									<slash:comments>0</slash:comments>
+				
+							</item>
+					<item>
+				<guid isPermaLink="false">1604c3ba29460506f1544caf1fb81489</guid>
+				<title>COORREIA.GITHUB.IO/ORLANDO posted an update: &#x1f602; AGORA É CONNOSCO</title>
+				<link>/orlando/activity/p/10/</link>
+				<pubDate>Fri, 03 Sep 2021 13:27:05 +0000</pubDate>
+
+									<content:encoded><![CDATA[<p>&#x1f602; AGORA É CONNOSCO</p>
+<div class="bpfb_final_link">
+<div class="bpfb_link_preview_container">
+		<a href="https://techcrunch.com/2019/12/12/is-facebook-dead-to-gen-z/" rel="nofollow ugc"><img loading="lazy" src="https://techcrunch.com/wp-content/uploads/2019/11/GettyImages-659827634.jpg?w=600" /></a>
+	</div>
+<div class="bpfb_link_contents">
+<div class="bpfb_link_preview_title">Is Facebook dead to Gen Z? – TechCrunch</div>
+<div class="bpfb_link_preview_url">
+			<a href="https://techcrunch.com/2019/12/12/is-facebook-dead-to-gen-z/" rel="nofollow ugc">https://techcrunch.com/2019/12/12/is-facebook-dead-to-gen-z/</a>
+		</div>
+<div class="bpfb_link_preview_body">Olivia Moore Contributor Share on Twitter Olivia Moore is a venture investor at CRV and co-founded Cardinal Ventures alongside her sister, Justine. More posts by this contributor Is Facebook dead to Ge&hellip;</div>
+</div>
+</div>
+<p><span class="activity-read-more" id="activity-read-more-10"><a href="/orlando/activity/p/10/" rel="nofollow ugc">[Read more]</a></span></p>
+]]></content:encoded>
+				
+									<slash:comments>0</slash:comments>
+				
+							</item>
+		
+	</channel>
+</rss>
