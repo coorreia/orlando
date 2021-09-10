@@ -40,6 +40,7 @@ img.emoji {
 <link rel='stylesheet' id='bp-dynamic-members-block-css'  href='http://localhost/wp-content/plugins/buddypress/bp-members/css/blocks/dynamic-members.min.css?ver=9.1.1' type='text/css' media='all' />
 <link rel='stylesheet' id='bp-latest-activities-block-css'  href='http://localhost/wp-content/plugins/buddypress/bp-activity/css/blocks/latest-activities.min.css?ver=9.1.1' type='text/css' media='all' />
 <link rel='stylesheet' id='bp-admin-bar-css'  href='http://localhost/wp-content/plugins/buddypress/bp-core/css/admin-bar.min.css?ver=9.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-mentions-css-css'  href='http://localhost/wp-content/plugins/buddypress/bp-activity/css/mentions.min.css?ver=9.1.1' type='text/css' media='all' />
 <link rel='stylesheet' id='bp-legacy-css-css'  href='http://localhost/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.min.css?ver=9.1.1' type='text/css' media='screen' />
 <style id='bp-legacy-css-inline-css' type='text/css'>
 
@@ -168,6 +169,10 @@ img.emoji {
 		}
 	
 </style>
+<link rel='stylesheet' id='thickbox-css'  href='http://localhost/wp-includes/js/thickbox/thickbox.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-activity-plus-reloaded-uploader-css'  href='http://localhost/wp-content/plugins/bp-activity-plus-reloaded/assets/css/external/fileuploader.css?ver=1.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-activity-plus-reloaded-css'  href='http://localhost/wp-content/plugins/bp-activity-plus-reloaded/assets/css/bp-activity-plus-reloaded.css?ver=1.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-activity-plus-reloaded-toolbar-css'  href='http://localhost/wp-content/plugins/bp-activity-plus-reloaded/assets/css/bp-activity-plus-reloaded-toolbar.css?ver=1.0.6' type='text/css' media='all' />
 <link rel='stylesheet' id='my-github-styles-css'  href='http://localhost/wp-content/plugins/my-github/assets/my_github.min.css?ver=1.2.2' type='text/css' media='all' />
 <link rel='stylesheet' id='my-pure-grid-css-css'  href='http://localhost/wp-content/plugins/my-github/assets/grids-min.css?ver=1.2.2' type='text/css' media='all' />
 <link rel='stylesheet' id='my-font-awesome-css-css'  href='http://localhost/wp-content/plugins/my-github/assets/fontawesome-free-5.15.3/css/all.min.css?ver=1.2.2' type='text/css' media='all' />
@@ -202,10 +207,17 @@ var BP_Confirm = {"are_you_sure":"Are you sure?"};
 <script type='text/javascript' src='http://localhost/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.min.js?ver=9.1.1' id='bp-jquery-scroll-to-js'></script>
 <script type='text/javascript' id='bp-legacy-js-js-extra'>
 /* <![CDATA[ */
-var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":"1"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://localhost/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.min.js?ver=9.1.1' id='bp-legacy-js-js'></script>
+<script type='text/javascript' src='http://localhost/wp-content/plugins/bp-activity-plus-reloaded/assets/js/external/fileuploader.js?ver=1.0.6' id='qq-file-uploader-js'></script>
+<script type='text/javascript' id='bp-activity-plus-reloaded-js-extra'>
+/* <![CDATA[ */
+var BPAPRJSData = {"add_photos_tip":"Add images","add_photos":"Submit images post","add_remote_image":"Add image URL","add_another_remote_image":"Add another image URL","add_videos":"Add videos","add_video":"Submit video post","add_links":"Add links","add_link":"Submit link post","add":"Add","cancel":"Cancel","preview":"Preview","drop_files":"Drop files here to upload","upload_file":"Upload a file","choose_thumbnail":"Choose thumbnail","no_thumbnail":"No thumbnail","paste_video_url":"Paste video URL here","paste_link_url":"Paste link here","images_limit_exceeded":"You tried to add too many images, only 5 will be posted.","_max_images":"5","isGroup":"0","groupID":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://localhost/wp-content/plugins/bp-activity-plus-reloaded/assets/js/bp-activity-plus-reloaded.js?ver=1.0.6' id='bp-activity-plus-reloaded-js'></script>
 <script type='text/javascript' src='http://localhost/wp-content/themes/typecore/js/jquery.flexslider.min.js?ver=5.8.1' id='typecore-flexslider-js'></script>
 <link rel="https://api.w.org/" href="http://localhost/wp-json/" /><link rel="alternate" type="application/json" href="http://localhost/wp-json/wp/v2/pages/0" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/wp-includes/wlwmanifest.xml" /> 
@@ -253,11 +265,23 @@ body.custom-background { background-color: #ffffff; }
 <link rel='canonical' href='http://localhost/members/orlando/' />
 <style id="kirki-inline-styles"></style></head>
 
-<body class="activity bp-user my-activity just-me buddypress bp-legacy page-template-default page page-id-0 page-parent admin-bar no-customize-support custom-background col-2cr full-width header-social-hide no-js">
+<body class="activity bp-user my-activity my-account just-me buddypress bp-legacy page-template-default page page-id-0 page-parent logged-in admin-bar no-customize-support custom-background col-3cr full-width header-social-hide no-js">
 
-		<div id="wpadminbar" class="nojq nojs">
+	<script type="text/javascript">
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+				request = true;
+	
+			b[c] = b[c].replace( rcs, ' ' );
+			// The customizer requires postMessage and CORS (if the site is cross domain).
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	</script>
+			<div id="wpadminbar" class="nojq nojs">
 						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
-				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><div class="ab-item ab-empty-item" tabindex="0" aria-haspopup="true"><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">About WordPress</span></div><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://wordpress.org/support/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/forums/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://localhost/wp-login.php?redirect_to=http%3A%2F%2Flocalhost%2Fmembers%2Forlando%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://localhost/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search" /></form></div></li></ul>			</div>
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/wp-admin/about.php'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://localhost/wp-admin/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://wordpress.org/support/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/forums/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/wp-admin/'>localhost</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-site-name-default' class="ab-submenu"><li id='wp-admin-bar-dashboard'><a class='ab-item' href='http://localhost/wp-admin/'>Dashboard</a></li></ul><ul id='wp-admin-bar-appearance' class="ab-submenu"><li id='wp-admin-bar-themes'><a class='ab-item' href='http://localhost/wp-admin/themes.php'>Themes</a></li><li id='wp-admin-bar-widgets'><a class='ab-item' href='http://localhost/wp-admin/widgets.php'>Widgets</a></li><li id='wp-admin-bar-menus'><a class='ab-item' href='http://localhost/wp-admin/nav-menus.php'>Menus</a></li><li id='wp-admin-bar-background' class="hide-if-customize"><a class='ab-item' href='http://localhost/wp-admin/themes.php?page=custom-background'>Background</a></li><li id='wp-admin-bar-header' class="hide-if-customize"><a class='ab-item' href='http://localhost/wp-admin/themes.php?page=custom-header'>Header</a></li></ul></div></li><li id='wp-admin-bar-customize' class="hide-if-no-customize"><a class='ab-item' href='http://localhost/wp-admin/customize.php?url=http%3A%2F%2Flocalhost%2Fmembers%2Forlando%2F'>Customize</a></li><li id='wp-admin-bar-updates'><a class='ab-item' href='http://localhost/wp-admin/update-core.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label" aria-hidden="true">4</span><span class="screen-reader-text updates-available-text">4 updates available</span></a></li><li id='wp-admin-bar-comments'><a class='ab-item' href='http://localhost/wp-admin/edit-comments.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 Comments in moderation</span></a></li><li id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/wp-admin/post-new.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-new-content-default' class="ab-submenu"><li id='wp-admin-bar-new-post'><a class='ab-item' href='http://localhost/wp-admin/post-new.php'>Post</a></li><li id='wp-admin-bar-new-media'><a class='ab-item' href='http://localhost/wp-admin/media-new.php'>Media</a></li><li id='wp-admin-bar-new-page'><a class='ab-item' href='http://localhost/wp-admin/post-new.php?post_type=page'>Page</a></li><li id='wp-admin-bar-new-user'><a class='ab-item' href='http://localhost/wp-admin/user-new.php'>User</a></li></ul></div></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://localhost/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search" /></form></div></li><li id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' aria-haspopup="true" href='http://localhost/members/orlando/profile/edit/'>Howdy, <span class="display-name">ORLANDO</span><img alt='' src='http://localhost/wp-content/uploads/avatars/1/6139e68a439f9-bpthumb.jpg' srcset='http://localhost/wp-content/uploads/avatars/1/6139e68a3cc92-bpfull.jpg 2x' class='avatar avatar-26 photo' height='26' width='26' /></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-user-actions' class="ab-submenu"><li id='wp-admin-bar-user-info'><a class='ab-item' tabindex="-1" href='http://localhost/members/orlando/profile/edit/'><img alt='' src='http://localhost/wp-content/uploads/avatars/1/6139e68a3cc92-bpfull.jpg' srcset='http://localhost/wp-content/uploads/avatars/1/6139e68a3cc92-bpfull.jpg 2x' class='avatar avatar-64 photo' height='64' width='64' /><span class='display-name'>ORLANDO</span></a></li><li id='wp-admin-bar-edit-profile'><a class='ab-item' href='http://localhost/members/orlando/profile/edit/'>Edit Profile</a></li><li id='wp-admin-bar-logout'><a class='ab-item' href='http://localhost/wp-login.php?action=logout&#038;_wpnonce=d6eda4096b'>Log Out</a></li></ul><ul id='wp-admin-bar-my-account-buddypress' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-my-account-activity' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/members/orlando/activity/'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Activity</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-my-account-activity-default' class="ab-submenu"><li id='wp-admin-bar-my-account-activity-personal'><a class='ab-item' href='http://localhost/members/orlando/activity/'>Personal</a></li><li id='wp-admin-bar-my-account-activity-mentions'><a class='ab-item' href='http://localhost/members/orlando/activity/mentions/'>Mentions</a></li><li id='wp-admin-bar-my-account-activity-favorites'><a class='ab-item' href='http://localhost/members/orlando/activity/favorites/'>Favorites</a></li></ul></div></li><li id='wp-admin-bar-my-account-xprofile' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/members/orlando/profile/'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Profile</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-my-account-xprofile-default' class="ab-submenu"><li id='wp-admin-bar-my-account-xprofile-public'><a class='ab-item' href='http://localhost/members/orlando/profile/'>View</a></li><li id='wp-admin-bar-my-account-xprofile-edit'><a class='ab-item' href='http://localhost/members/orlando/profile/edit/'>Edit</a></li><li id='wp-admin-bar-my-account-xprofile-change-avatar'><a class='ab-item' href='http://localhost/members/orlando/profile/change-avatar/'>Change Profile Photo</a></li><li id='wp-admin-bar-my-account-xprofile-change-cover-image'><a class='ab-item' href='http://localhost/members/orlando/profile/change-cover-image/'>Change Cover Image</a></li></ul></div></li><li id='wp-admin-bar-my-account-notifications' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/members/orlando/notifications/'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Notifications</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-my-account-notifications-default' class="ab-submenu"><li id='wp-admin-bar-my-account-notifications-unread'><a class='ab-item' href='http://localhost/members/orlando/notifications/'>Unread</a></li><li id='wp-admin-bar-my-account-notifications-read'><a class='ab-item' href='http://localhost/members/orlando/notifications/read/'>Read</a></li></ul></div></li><li id='wp-admin-bar-my-account-settings' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/members/orlando/settings/'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Settings</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-my-account-settings-default' class="ab-submenu"><li id='wp-admin-bar-my-account-settings-general'><a class='ab-item' href='http://localhost/members/orlando/settings/'>General</a></li><li id='wp-admin-bar-my-account-settings-notifications'><a class='ab-item' href='http://localhost/members/orlando/settings/notifications/'>Email</a></li><li id='wp-admin-bar-my-account-settings-data'><a class='ab-item' href='http://localhost/members/orlando/settings/data/'>Export Data</a></li><li id='wp-admin-bar-my-account-settings-profile'><a class='ab-item' href='http://localhost/members/orlando/settings/profile/'>Profile</a></li></ul></div></li></ul></div></li><li id='wp-admin-bar-bp-notifications' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://localhost/members/orlando/notifications/'><span id="ab-pending-notifications" class="count no-alert">0</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-bp-notifications-default' class="ab-submenu"><li id='wp-admin-bar-no-notifications'><a class='ab-item' href='http://localhost/members/orlando/notifications/'>No new notifications</a></li></ul></div></li></ul>			</div>
+						<a class="screen-reader-shortcut" href="http://localhost/wp-login.php?action=logout&#038;_wpnonce=d6eda4096b">Log Out</a>
 					</div>
 
 		
@@ -328,7 +352,7 @@ body.custom-background { background-color: #ffffff; }
 			
 			<div id="item-buttons"></div><!-- #item-buttons -->
 
-			<span class="activity" data-livestamp="2021-09-10T02:24:26+0000">Active 9 minutes ago</span>
+			<span class="activity" data-livestamp="2021-09-10T03:07:28+0000">Active 3 minutes ago</span>
 
 			
 			<div id="item-meta">
@@ -359,7 +383,7 @@ body.custom-background { background-color: #ffffff; }
 		<div class="item-list-tabs no-ajax" id="object-nav" aria-label="Member primary navigation" role="navigation">
 			<ul>
 
-				<li id="activity-personal-li"  class="current selected"><a id="user-activity" href="http://localhost/members/orlando/activity/">Activity</a></li><li id="xprofile-personal-li" ><a id="user-xprofile" href="http://localhost/members/orlando/profile/">Profile</a></li>
+				<li id="activity-personal-li"  class="current selected"><a id="user-activity" href="http://localhost/members/orlando/activity/">Activity</a></li><li id="xprofile-personal-li" ><a id="user-xprofile" href="http://localhost/members/orlando/profile/">Profile</a></li><li id="notifications-personal-li" ><a id="user-notifications" href="http://localhost/members/orlando/notifications/">Notifications <span class="count">0</span></a></li><li id="settings-personal-li" ><a id="user-settings" href="http://localhost/members/orlando/settings/">Settings</a></li>
 				
 			</ul>
 		</div>
@@ -387,6 +411,37 @@ body.custom-background { background-color: #ffffff; }
 
 
 
+<form action="http://localhost/activity/post/" method="post" id="whats-new-form" name="whats-new-form">
+
+	
+	<div id="whats-new-avatar">
+		<a href="http://localhost/members/orlando/">
+			<img loading="lazy" src="http://localhost/wp-content/uploads/avatars/1/6139e68a439f9-bpthumb.jpg" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of ORLANDO" />		</a>
+	</div>
+
+	<p class="activity-greeting">
+		What's new, ORLANDO?	</p>
+
+	<div id="whats-new-content">
+		<div id="whats-new-textarea">
+			<label for="whats-new" class="bp-screen-reader-text">Post what's new</label>
+			<textarea class="bp-suggestions" name="whats-new" id="whats-new" cols="50" rows="10"
+							></textarea>
+		</div>
+
+		<div id="whats-new-options">
+			<div id="whats-new-submit">
+				<input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="Post Update" />
+			</div>
+
+			
+			
+		</div><!-- #whats-new-options -->
+	</div><!-- #whats-new-content -->
+
+	<input type="hidden" id="_wpnonce_post_update" name="_wpnonce_post_update" value="95d9e185f0" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />	
+</form><!-- #whats-new-form -->
+
 <div class="activity" aria-live="polite" aria-atomic="true" aria-relevant="all">
 
 	
@@ -409,7 +464,7 @@ body.custom-background { background-color: #ffffff; }
 
 		<div class="activity-header">
 
-			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/8/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T11:05:51+0000">15 hours, 27 minutes ago</span></a></p>
+			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/8/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T11:05:51+0000">16 hours, 5 minutes ago</span></a></p>
 
 		</div>
 
@@ -429,6 +484,20 @@ body.custom-background { background-color: #ffffff; }
 
 			
 			
+				
+					<a href="?ac=8/#ac-form-8" class="button acomment-reply bp-primary-action" id="acomment-comment-8">
+						Comment <span>0</span>					</a>
+
+				
+				
+					
+						<a href="http://localhost/activity/favorite/8/?_wpnonce=acf953cb19" class="button fav bp-secondary-action">Favorite</a>
+
+					
+				
+				<a href="http://localhost/activity/delete/8/?_wpnonce=629a3a9b79" class="button item-button bp-secondary-action delete-activity confirm" rel="nofollow">Delete</a>
+				
+			
 		</div>
 
 	</div>
@@ -438,6 +507,22 @@ body.custom-background { background-color: #ffffff; }
 		<div class="activity-comments">
 
 			
+			
+				<form action="http://localhost/activity/reply/" method="post" id="ac-form-8" class="ac-form">
+					<div class="ac-reply-avatar"><img loading="lazy" src="http://localhost/wp-content/uploads/avatars/1/6139e68a439f9-bpthumb.jpg" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of ORLANDO" /></div>
+					<div class="ac-reply-content">
+						<div class="ac-textarea">
+							<label for="ac-input-8" class="bp-screen-reader-text">Comment</label>
+							<textarea id="ac-input-8" class="ac-input bp-suggestions" name="ac_input_8"></textarea>
+						</div>
+						<input type="submit" name="ac_form_submit" value="Post" /> &nbsp; <a href="#" class="ac-reply-cancel">Cancel</a>
+						<input type="hidden" name="comment_form_id" value="8" />
+					</div>
+
+					
+					<input type="hidden" id="_wpnonce_new_activity_comment_8" name="_wpnonce_new_activity_comment_8" value="93bb0a51ac" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />
+				</form>
+
 			
 		</div>
 
@@ -460,7 +545,7 @@ body.custom-background { background-color: #ffffff; }
 
 		<div class="activity-header">
 
-			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/6/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:58:59+0000">15 hours, 34 minutes ago</span></a></p>
+			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/6/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:58:59+0000">16 hours, 11 minutes ago</span></a></p>
 
 		</div>
 
@@ -477,6 +562,20 @@ body.custom-background { background-color: #ffffff; }
 
 			
 			
+				
+					<a href="?ac=6/#ac-form-6" class="button acomment-reply bp-primary-action" id="acomment-comment-6">
+						Comment <span>0</span>					</a>
+
+				
+				
+					
+						<a href="http://localhost/activity/favorite/6/?_wpnonce=acf953cb19" class="button fav bp-secondary-action">Favorite</a>
+
+					
+				
+				<a href="http://localhost/activity/delete/6/?_wpnonce=629a3a9b79" class="button item-button bp-secondary-action delete-activity confirm" rel="nofollow">Delete</a>
+				
+			
 		</div>
 
 	</div>
@@ -486,6 +585,22 @@ body.custom-background { background-color: #ffffff; }
 		<div class="activity-comments">
 
 			
+			
+				<form action="http://localhost/activity/reply/" method="post" id="ac-form-6" class="ac-form">
+					<div class="ac-reply-avatar"><img loading="lazy" src="http://localhost/wp-content/uploads/avatars/1/6139e68a439f9-bpthumb.jpg" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of ORLANDO" /></div>
+					<div class="ac-reply-content">
+						<div class="ac-textarea">
+							<label for="ac-input-6" class="bp-screen-reader-text">Comment</label>
+							<textarea id="ac-input-6" class="ac-input bp-suggestions" name="ac_input_6"></textarea>
+						</div>
+						<input type="submit" name="ac_form_submit" value="Post" /> &nbsp; <a href="#" class="ac-reply-cancel">Cancel</a>
+						<input type="hidden" name="comment_form_id" value="6" />
+					</div>
+
+					
+					<input type="hidden" id="_wpnonce_new_activity_comment_6" name="_wpnonce_new_activity_comment_6" value="93bb0a51ac" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />
+				</form>
+
 			
 		</div>
 
@@ -508,7 +623,7 @@ body.custom-background { background-color: #ffffff; }
 
 		<div class="activity-header">
 
-			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/5/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:57:54+0000">15 hours, 35 minutes ago</span></a></p>
+			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/5/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:57:54+0000">16 hours, 12 minutes ago</span></a></p>
 
 		</div>
 
@@ -525,6 +640,20 @@ body.custom-background { background-color: #ffffff; }
 
 			
 			
+				
+					<a href="?ac=5/#ac-form-5" class="button acomment-reply bp-primary-action" id="acomment-comment-5">
+						Comment <span>0</span>					</a>
+
+				
+				
+					
+						<a href="http://localhost/activity/favorite/5/?_wpnonce=acf953cb19" class="button fav bp-secondary-action">Favorite</a>
+
+					
+				
+				<a href="http://localhost/activity/delete/5/?_wpnonce=629a3a9b79" class="button item-button bp-secondary-action delete-activity confirm" rel="nofollow">Delete</a>
+				
+			
 		</div>
 
 	</div>
@@ -534,6 +663,22 @@ body.custom-background { background-color: #ffffff; }
 		<div class="activity-comments">
 
 			
+			
+				<form action="http://localhost/activity/reply/" method="post" id="ac-form-5" class="ac-form">
+					<div class="ac-reply-avatar"><img loading="lazy" src="http://localhost/wp-content/uploads/avatars/1/6139e68a439f9-bpthumb.jpg" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of ORLANDO" /></div>
+					<div class="ac-reply-content">
+						<div class="ac-textarea">
+							<label for="ac-input-5" class="bp-screen-reader-text">Comment</label>
+							<textarea id="ac-input-5" class="ac-input bp-suggestions" name="ac_input_5"></textarea>
+						</div>
+						<input type="submit" name="ac_form_submit" value="Post" /> &nbsp; <a href="#" class="ac-reply-cancel">Cancel</a>
+						<input type="hidden" name="comment_form_id" value="5" />
+					</div>
+
+					
+					<input type="hidden" id="_wpnonce_new_activity_comment_5" name="_wpnonce_new_activity_comment_5" value="93bb0a51ac" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />
+				</form>
+
 			
 		</div>
 
@@ -556,7 +701,7 @@ body.custom-background { background-color: #ffffff; }
 
 		<div class="activity-header">
 
-			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/4/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:55:10+0000">15 hours, 38 minutes ago</span></a></p>
+			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/4/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:55:10+0000">16 hours, 15 minutes ago</span></a></p>
 
 		</div>
 
@@ -585,6 +730,20 @@ body.custom-background { background-color: #ffffff; }
 
 			
 			
+				
+					<a href="?ac=4/#ac-form-4" class="button acomment-reply bp-primary-action" id="acomment-comment-4">
+						Comment <span>0</span>					</a>
+
+				
+				
+					
+						<a href="http://localhost/activity/favorite/4/?_wpnonce=acf953cb19" class="button fav bp-secondary-action">Favorite</a>
+
+					
+				
+				<a href="http://localhost/activity/delete/4/?_wpnonce=629a3a9b79" class="button item-button bp-secondary-action delete-activity confirm" rel="nofollow">Delete</a>
+				
+			
 		</div>
 
 	</div>
@@ -594,6 +753,22 @@ body.custom-background { background-color: #ffffff; }
 		<div class="activity-comments">
 
 			
+			
+				<form action="http://localhost/activity/reply/" method="post" id="ac-form-4" class="ac-form">
+					<div class="ac-reply-avatar"><img loading="lazy" src="http://localhost/wp-content/uploads/avatars/1/6139e68a439f9-bpthumb.jpg" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of ORLANDO" /></div>
+					<div class="ac-reply-content">
+						<div class="ac-textarea">
+							<label for="ac-input-4" class="bp-screen-reader-text">Comment</label>
+							<textarea id="ac-input-4" class="ac-input bp-suggestions" name="ac_input_4"></textarea>
+						</div>
+						<input type="submit" name="ac_form_submit" value="Post" /> &nbsp; <a href="#" class="ac-reply-cancel">Cancel</a>
+						<input type="hidden" name="comment_form_id" value="4" />
+					</div>
+
+					
+					<input type="hidden" id="_wpnonce_new_activity_comment_4" name="_wpnonce_new_activity_comment_4" value="93bb0a51ac" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />
+				</form>
+
 			
 		</div>
 
@@ -616,7 +791,7 @@ body.custom-background { background-color: #ffffff; }
 
 		<div class="activity-header">
 
-			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/3/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:54:20+0000">15 hours, 39 minutes ago</span></a></p>
+			<p><a href="http://localhost/members/orlando/">ORLANDO</a> posted an update <a href="http://localhost/activity/p/3/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:54:20+0000">16 hours, 16 minutes ago</span></a></p>
 
 		</div>
 
@@ -645,6 +820,20 @@ body.custom-background { background-color: #ffffff; }
 
 			
 			
+				
+					<a href="?ac=3/#ac-form-3" class="button acomment-reply bp-primary-action" id="acomment-comment-3">
+						Comment <span>0</span>					</a>
+
+				
+				
+					
+						<a href="http://localhost/activity/favorite/3/?_wpnonce=acf953cb19" class="button fav bp-secondary-action">Favorite</a>
+
+					
+				
+				<a href="http://localhost/activity/delete/3/?_wpnonce=629a3a9b79" class="button item-button bp-secondary-action delete-activity confirm" rel="nofollow">Delete</a>
+				
+			
 		</div>
 
 	</div>
@@ -654,6 +843,22 @@ body.custom-background { background-color: #ffffff; }
 		<div class="activity-comments">
 
 			
+			
+				<form action="http://localhost/activity/reply/" method="post" id="ac-form-3" class="ac-form">
+					<div class="ac-reply-avatar"><img loading="lazy" src="http://localhost/wp-content/uploads/avatars/1/6139e68a439f9-bpthumb.jpg" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of ORLANDO" /></div>
+					<div class="ac-reply-content">
+						<div class="ac-textarea">
+							<label for="ac-input-3" class="bp-screen-reader-text">Comment</label>
+							<textarea id="ac-input-3" class="ac-input bp-suggestions" name="ac_input_3"></textarea>
+						</div>
+						<input type="submit" name="ac_form_submit" value="Post" /> &nbsp; <a href="#" class="ac-reply-cancel">Cancel</a>
+						<input type="hidden" name="comment_form_id" value="3" />
+					</div>
+
+					
+					<input type="hidden" id="_wpnonce_new_activity_comment_3" name="_wpnonce_new_activity_comment_3" value="93bb0a51ac" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />
+				</form>
+
 			
 		</div>
 
@@ -676,7 +881,7 @@ body.custom-background { background-color: #ffffff; }
 
 		<div class="activity-header">
 
-			<p><a href="http://localhost/members/orlando/">ORLANDO</a> changed their profile picture <a href="http://localhost/activity/p/2/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:48:42+0000">15 hours, 44 minutes ago</span></a></p>
+			<p><a href="http://localhost/members/orlando/">ORLANDO</a> changed their profile picture <a href="http://localhost/activity/p/2/" class="view activity-time-since bp-tooltip" data-bp-tooltip="View Discussion"><span class="time-since" data-livestamp="2021-09-09T10:48:42+0000">16 hours, 22 minutes ago</span></a></p>
 
 		</div>
 
@@ -685,6 +890,20 @@ body.custom-background { background-color: #ffffff; }
 		<div class="activity-meta">
 
 			
+			
+				
+					<a href="?ac=2/#ac-form-2" class="button acomment-reply bp-primary-action" id="acomment-comment-2">
+						Comment <span>0</span>					</a>
+
+				
+				
+					
+						<a href="http://localhost/activity/favorite/2/?_wpnonce=acf953cb19" class="button fav bp-secondary-action">Favorite</a>
+
+					
+				
+				<a href="http://localhost/activity/delete/2/?_wpnonce=629a3a9b79" class="button item-button bp-secondary-action delete-activity confirm" rel="nofollow">Delete</a>
+				
 			
 		</div>
 
@@ -695,6 +914,22 @@ body.custom-background { background-color: #ffffff; }
 		<div class="activity-comments">
 
 			
+			
+				<form action="http://localhost/activity/reply/" method="post" id="ac-form-2" class="ac-form">
+					<div class="ac-reply-avatar"><img loading="lazy" src="http://localhost/wp-content/uploads/avatars/1/6139e68a439f9-bpthumb.jpg" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of ORLANDO" /></div>
+					<div class="ac-reply-content">
+						<div class="ac-textarea">
+							<label for="ac-input-2" class="bp-screen-reader-text">Comment</label>
+							<textarea id="ac-input-2" class="ac-input bp-suggestions" name="ac_input_2"></textarea>
+						</div>
+						<input type="submit" name="ac_form_submit" value="Post" /> &nbsp; <a href="#" class="ac-reply-cancel">Cancel</a>
+						<input type="hidden" name="comment_form_id" value="2" />
+					</div>
+
+					
+					<input type="hidden" id="_wpnonce_new_activity_comment_2" name="_wpnonce_new_activity_comment_2" value="93bb0a51ac" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />
+				</form>
+
 			
 		</div>
 
@@ -714,7 +949,7 @@ body.custom-background { background-color: #ffffff; }
 
 	<form action="" name="activity-loop-form" id="activity-loop-form" method="post">
 
-		<input type="hidden" id="_wpnonce_activity_filter" name="_wpnonce_activity_filter" value="8cca3ae916" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />
+		<input type="hidden" id="_wpnonce_activity_filter" name="_wpnonce_activity_filter" value="daf2c330a7" /><input type="hidden" name="_wp_http_referer" value="/members/orlando/" />
 	</form>
 
 
@@ -745,7 +980,20 @@ body.custom-background { background-color: #ffffff; }
 			
 						
 						
-			<div id="my-github-6" class="widget widget_my-github"><div class="textwidget"><div class="plugin-side-options">
+			<div id="block-19" class="widget widget_block"><h3></h3><!-- Start BawkBox Code--><script data-sil-id="613ac72f41320b001e79f593">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/blog/613ac72f41320b001e79f593?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-blog sil-widget" id="sil-widget-613ac72f41320b001e79f593"><a href="//bawkbox.com/install/blog"></a></div><!-- End BawkBox Code--></div><div id="block-17" class="widget widget_block"><h3></h3><!-- Start BawkBox Code--><script data-sil-id="613abe4a41320b001e79f2f3">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/customer-chat/613abe4a41320b001e79f2f3?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-customer-chat sil-widget" id="sil-widget-613abe4a41320b001e79f2f3"><a href="//bawkbox.com/install/customer-chat">Customer Chat</a></div><!-- End BawkBox Code--></div>			
+		</div><!--/.sidebar-content-->
+		
+	</div><!--/.sidebar-->
+
+	
+<div class="sidebar s2">
+	
+	<a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+	
+	<div class="sidebar-content">
+			
+				
+		<div id="my-github-4" class="widget widget_my-github"><div class="textwidget"><div class="plugin-side-options">
         <img class="widget-avatar-image-circle" src="https://avatars.githubusercontent.com/u/45447619?v=4" alt="Orlando">
         <h5>
         <a class="text-decoration-none" href="https://github.com/coorreia" target="_blank">Orlando</a>
@@ -772,12 +1020,10 @@ body.custom-background { background-color: #ffffff; }
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24auSw4AzVVp1Y5ZxhYHLNe0"+"&opts=16566&num=20&ts=1631238816880");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com --></div><div id="block-17" class="widget widget_block"><h3></h3><!-- Start BawkBox Code--><script data-sil-id="613abe4a41320b001e79f2f3">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/customer-chat/613abe4a41320b001e79f2f3?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-customer-chat sil-widget" id="sil-widget-613abe4a41320b001e79f2f3"><a href="//bawkbox.com/install/customer-chat">Customer Chat</a></div><!-- End BawkBox Code--></div>			
-		</div><!--/.sidebar-content-->
-		
-	</div><!--/.sidebar-->
-
-		
+<!-- end www.htmlcommentbox.com --></div>		
+	</div><!--/.sidebar-content-->
+	
+</div><!--/.sidebar-->	
 
 				</div><!--/.main-inner-->
 			</div><!--/.main-->			
@@ -822,6 +1068,15 @@ body.custom-background { background-color: #ffffff; }
 <script type='text/javascript' src='http://localhost/wp-includes/js/admin-bar.min.js?ver=5.8.1' id='admin-bar-js'></script>
 <script type='text/javascript' src='http://localhost/wp-content/plugins/buddypress/bp-core/js/vendor/moment-js/moment.min.js?ver=9.1.1' id='bp-moment-js'></script>
 <script type='text/javascript' src='http://localhost/wp-content/plugins/buddypress/bp-core/js/vendor/livestamp.min.js?ver=9.1.1' id='bp-livestamp-js'></script>
+<script type='text/javascript' src='http://localhost/wp-content/plugins/buddypress/bp-core/js/vendor/jquery.caret.min.js?ver=9.1.1' id='jquery-caret-js'></script>
+<script type='text/javascript' src='http://localhost/wp-content/plugins/buddypress/bp-core/js/vendor/jquery.atwho.min.js?ver=9.1.1' id='jquery-atwho-js'></script>
+<script type='text/javascript' src='http://localhost/wp-content/plugins/buddypress/bp-activity/js/mentions.min.js?ver=9.1.1' id='bp-mentions-js'></script>
+<script type='text/javascript' id='thickbox-js-extra'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/localhost\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://localhost/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105' id='thickbox-js'></script>
 <script type='text/javascript' src='http://localhost/wp-content/themes/typecore/js/jquery.fitvids.js?ver=5.8.1' id='typecore-fitvids-js'></script>
 <script type='text/javascript' src='http://localhost/wp-content/themes/typecore/js/scripts.js?ver=5.8.1' id='typecore-scripts-js'></script>
 <script type='text/javascript' src='http://localhost/wp-includes/js/comment-reply.min.js?ver=5.8.1' id='comment-reply-js'></script>
@@ -829,7 +1084,7 @@ body.custom-background { background-color: #ffffff; }
 <script type='text/javascript' src='http://localhost/wp-includes/js/wp-embed.min.js?ver=5.8.1' id='wp-embed-js'></script>
 <script type='text/javascript' id='fifu-image-js-js-extra'>
 /* <![CDATA[ */
-var fifuImageVars = {"fifu_lazy":"","fifu_woo_lbox_enabled":"1","fifu_woo_zoom":"inline","fifu_is_product":"","fifu_is_flatsome_active":"","fifu_rest_url":"http:\/\/localhost\/wp-json\/","fifu_nonce":"b406ae9fa3"};
+var fifuImageVars = {"fifu_lazy":"","fifu_woo_lbox_enabled":"1","fifu_woo_zoom":"inline","fifu_is_product":"","fifu_is_flatsome_active":"","fifu_rest_url":"http:\/\/localhost\/wp-json\/","fifu_nonce":"5e82fe4edf"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://localhost/wp-content/plugins/featured-image-from-url/includes/html/js/image.js?ver=3.7.2' id='fifu-image-js-js'></script>
